@@ -56,5 +56,28 @@
 | Target HA | Địa chỉ MAC của máy nhận |
 | Target PA | Địa chỉ IP máy nhận |
 
-## IV.Tham khảo:
+## IV.Bắt gói tin ARP bằng Wireshark
+
+- Bước 1: Khởi động phần mềm Wireshark
+- Bước 2: Xóa cache ARP có sẵn trên máy bằng lệnh `netsh interface ip delete arpcache`
+- Bước 3: Tìm gói ARP trong Wireshark
+
+<img src="http://i.imgur.com/4JA8Zfh.png">
+
+- Bước 4: Đọc gói tin ARP request
+
+<img src="http://i.imgur.com/kWVkUdy.png">
+
+Gói tin được gửi dạng Broadcast có thông tin IP, MAC của nguồn và IP của đích
+
+<img src="http://i.imgur.com/ATsTAtr.png">
+
+- Bước 5: Đọc gói tin ARP reply
+
+<img src="http://i.imgur.com/5Fk6AjO.png">
+
+Gói reply được gửi đến MAC nguồn và có thêm thông tin MAC mà nguồn cần
+
+## V.Tham khảo:
+
 - https://viblo.asia/pham.tri.thai/posts/mPjxMeZKG4YL
