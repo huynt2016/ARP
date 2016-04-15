@@ -5,7 +5,8 @@
 ## II.Cơ chế
 
 <img src="http://i.imgur.com/ZCEJa4I.png">
-- Ở đây tôi giải thích cơ chế của ARP theo 5 bươc như sau
+
+- Ở đây tôi giải thích cơ chế của ARP theo 4 bước như sau:
 
 ### a.Bước 1
 
@@ -35,15 +36,12 @@
 ### d.Bước 4
 
 - Thiết bị A nhận được gói tin reply và xử lý bằng cách lưu trường Sender Hardware Address trong gói reply vào địa chỉ phần cứng của thiết bị B.
-
-### e.Bước 5
-
-- Thiết bị A update vào ARP cache của mình giá trị tương ứng giữa địa chỉ IP (địa chỉ network) và địa chỉ MAC (địac chỉ datalink) của thiết bị B. Lần sau sẽ không còn cần tới request.
+- Đồng thời thiết bị A update vào ARP cache của mình giá trị tương ứng giữa địa chỉ IP (địa chỉ network) và địa chỉ MAC (địa chỉ datalink) của thiết bị B. Lần sau sẽ không còn cần tới request.
 
 ### e. Lưu ý
 - Hoạt động của ARP phức tạp hơn khi là hai hệ thống mạng gắn với nhau thông qua một router. Khi đó route sẽ là trung gian chuyển các gói ARP request và reply cho các thiết bị.
 
-## ARP Header
+## III.ARP Header
 
 <img src="http://i.imgur.com/hXRNka5.png">
 
@@ -58,5 +56,5 @@
 | Target HA | Địa chỉ MAC của máy nhận |
 | Target PA | Địa chỉ IP máy nhận |
 
-## Tham khảo:
+## IV.Tham khảo:
 - https://viblo.asia/pham.tri.thai/posts/mPjxMeZKG4YL
